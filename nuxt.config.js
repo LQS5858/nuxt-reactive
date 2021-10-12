@@ -28,6 +28,10 @@ export default {
     {
       src: '~plugins/i18n/index.js',
       ssr: true
+    },
+    {
+      src: '~/plugins/axios/index.js',
+      ssr: true
     }
   ],
 
@@ -46,11 +50,23 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/proxy'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  // axios: {
+  //   proxy: true
+  // },
+  proxy: {
+    '/api': {
+      target: 'https://api.hooapi.xyz',
+      pathRewrite: {
+        '^/api': ''
+      }
+    }
+  },
+
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {

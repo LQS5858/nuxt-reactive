@@ -16,16 +16,21 @@
       <img src="~assets/images/qr-prod.png"
            alt="">
     </div>
+    <div>测试路由拦截{{testData}}</div>
   </div>
 </template>
 <script>
 import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'Demo',
+  asyncData: ({ app }) => {
+    return { testData: app.$http }
+  },
   data () {
     return {
     }
   },
+
   computed: {
     ...mapState({
       count: state => state.basic.count
