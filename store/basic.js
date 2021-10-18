@@ -1,6 +1,7 @@
 export const state = () => ({
   count: 8,
-  lang: 'zh'
+  lang: 'zh',
+  userInfo: {}
 })
 
 export const mutations = {
@@ -9,5 +10,8 @@ export const mutations = {
   },
   SET_LANG (state, data) {
     state.lang = data
+  },
+  SAVE_USER_INFO (state, data) {
+    state.userInfo = data
   }
 }

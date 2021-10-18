@@ -1,6 +1,5 @@
 
 import AesEncrypt from 'aes-cross'
-import { StorageCache } from 'bt-tools'
 
 
 export function randomEncrypt (min, max) {
@@ -58,8 +57,8 @@ export function generateEncrypt (apiVerificationConfig, token, params = {}) {
             /**
              * 开发调试的时候localstorage没有dasauto，为了开发调试方便设置默认值
              */
-            let temp1 = StorageCache.get(g2) || 20
-            let temp2 = StorageCache.get(b2) || 34
+            let temp1 = localStorage.getItem(g2) || 20
+            let temp2 = localStorage.getItem(b2) || 34
             temp1 = temp1 || String(temp1) === '0' ? parseInt(temp1) - 4 : temp1
             temp2 = temp2 || String(temp2) === '0' ? parseInt(temp2) - 2 : temp2
             randomNum = randomEncrypt(16, 16)

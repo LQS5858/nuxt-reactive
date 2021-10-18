@@ -1,5 +1,5 @@
-import service from '~/apiServices/http/http.js'
+import service from '@/apiServices/http/http.js'
 
-export default ({ app }, inject) => {
-    inject('http', service(app))
+export default ({ app, store }, inject) => {
+    inject('http', service(app, store))
 }

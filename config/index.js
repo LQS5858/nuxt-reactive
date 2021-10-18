@@ -8,3 +8,8 @@ export const apiVerificationConfig = {
     g2: "hoo.logger.G2",
     b2: "hoo.logger.B2"
 }
+
+/**
+ * websocket路径
+ */
+export const wsUrl = process.env.NODE_ENV === 'development' ? 'wss://exchange.mojo.hoogeek.com/ws' : ''

@@ -16,18 +16,17 @@
       <img src="~assets/images/qr-prod.png"
            alt="">
     </div>
-    <div>测试路由拦截{{testData}}</div>
+    <div>用户信息{{userInfo}}</div>
   </div>
 </template>
 <script>
 import { mapState, mapMutations } from 'vuex'
+import { fetchProfile } from '@/apiServices/accountCenter'
 export default {
   name: 'Demo',
-  asyncData: ({ app }) => {
-    return { testData: app.$http }
-  },
   data () {
     return {
+      userInfo: {}
     }
   },
 
@@ -50,7 +49,15 @@ export default {
     },
     changeCount () {
       this.add(5)
+    },
+    async fetchProfile () {
+      const data = await fetchProfile(this, true)
+      console.log('用户信息>>>', data);
+      this.userInfo = data
     }
+  },
+  mounted () {
+    this.fetchProfile()
   }
 }
 </script>

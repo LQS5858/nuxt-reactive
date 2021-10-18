@@ -30,8 +30,12 @@ export default {
       ssr: true
     },
     {
-      src: '~/plugins/axios/index.js',
+      src: '~plugins/axios/index.js',
       ssr: true
+    },
+    {
+      src: '~plugins/bus/index.js',
+      ssr: false
     }
   ],
 
@@ -41,7 +45,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    // '@nuxtjs/eslint-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -60,7 +64,7 @@ export default {
   // },
   proxy: {
     '/api': {
-      target: 'https://api.hooapi.xyz',
+      target: 'https://exchange.mojo.hoogeek.com/',
       pathRewrite: {
         '^/api': ''
       }
