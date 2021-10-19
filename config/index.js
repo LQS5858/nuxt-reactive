@@ -12,4 +12,4 @@ export const apiVerificationConfig = {
 /**
  * websocket路径
  */
-export const wsUrl = process.env.NODE_ENV === 'development' ? 'wss://exchange.mojo.hoogeek.com/ws' : ''
+export const wsUrl = process.env.NODE_ENV === 'development' ? 'wss://ws.hoowss.com/ws' : 'wss://ws.hoowss.com/ws'

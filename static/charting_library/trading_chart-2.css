@@ -1,0 +1,164 @@
+@font-face {
+    font-family: "gilroy-bold";
+    src: url("./fonts/gilroy-bold.otf");
+}
+
+@font-face {
+    font-family: "gilroy-medium";
+    src: url("./fonts/Gilroy-Medium.otf");
+}
+
+@font-face {
+    font-family: "gilroy-regular";
+    src: url("./fonts/gilroy-regular.otf");
+}
+.group-2JyOhh7Z- + .group-2JyOhh7Z- {
+    padding-top: 1px !important;
+    margin-top: 0;
+}
+.scrollBot-2HHpZNuf- {
+    background: #0e1a24;
+}
+
+.fadeTop-3oJzNyTq-,
+.fadeBot-3JstnoWq- {
+    background-image: none;
+}
+
+body {
+    font-family: "gilroy-regular" !important;
+}
+
+.tv-dialog {
+    background: #142330;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.tv-dialog__section {
+    border: none;
+}
+.tv-insert-indicator-dialog__pages::-webkit-scrollbar {
+    display: none;
+}
+.tv-insert-study-item:not(.tv-insert-study-item--subgroup-header):hover {
+    background: rgba(26, 183, 166, 0.1);
+}
+.tv-insert-indicator-dialog__search-control {
+    background: #263441;
+    border-radius: 4px;
+    border: none;
+}
+.tv-insert-indicator-dialog__search-control input {
+    background: #263441;
+    border-radius: 4px;
+}
+
+.tv-insert-study-item__title-text {
+    color: #cfd3d6;
+}
+
+.tv-dialog__title {
+    color: #fff;
+}
+
+.fill-2axUON87- {
+    display: none;
+}
+
+.wrap-3tiHesTk- {
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+.group-wWM3zP_M- {
+    /*background: #18222B;*/
+    background: #0e1a24;
+    cursor: pointer;
+}
+
+body,
+.chart-page .chart-container-border {
+    background-color: #0e1a24;
+}
+
+.button-2ioYhFEY-.isInteractive-20uLObIc- {
+    cursor: pointer;
+}
+
+.feature-no-touch .button-2ioYhFEY-.isInteractive-20uLObIc-:hover {
+    color: #1c65a6;
+}
+
+#loading-indicator,
+body.chart-page {
+    background: 0 0;
+}
+
+.container-3_8ayT2Q- .background-Q1Fcmxly- {
+    fill: #1c65a6;
+    stroke: #1c65a6;
+}
+
+.button-263WXsg--,
+.button-2ioYhFEY- {
+    color: #758696;
+}
+
+.button-2ioYhFEY-.isInteractive-20uLObIc-:hover:before,
+.button-263WXsg--:hover .bg-1kRv1Pf2- {
+    background: #0e1a24;
+}
+
+.button-263WXsg--:hover .bg-1kRv1Pf2- {
+    color: #1c65a6;
+}
+
+.button-2ioYhFEY-.isInteractive-20uLObIc-.isOpened-p-Ume5l9-:before {
+    background: #0e1a24;
+}
+
+.button-2ioYhFEY-.isInteractive-20uLObIc-.hover-yHQNmTbI-:before,
+.button-2ioYhFEY-.isInteractive-20uLObIc-:active:before {
+    background: #0e1a24;
+}
+
+.button-2ioYhFEY-.isInteractive-20uLObIc-.isOpened-p-Ume5l9-:hover:before {
+    background: #0e1a24;
+}
+
+.button-263WXsg--:active .bg-1kRv1Pf2- {
+    background: #0e1a24;
+}
+
+.button-263WXsg--.isTransparent-sRmateFl-.isActive-2mI1-NUL-:hover .bg-1kRv1Pf2- {
+    background: #0e1a24;
+}
+
+/*指标弹窗样式*/
+/*.tv-dialog, .tv-insert-indicator-dialog__search-control {*/
+/*    background: #52585E;*/
+/*    color: rgba(255, 255, 255, 1);*/
+/*}*/
+
+/*.tv-insert-indicator-dialog__search-control input {*/
+/*    background: rgba(255, 255, 255, 1);*/
+/*}*/
+
+/*.tv-search-row {*/
+/*    border-bottom-color: rgba(50, 60, 68, 1);*/
+/*}*/
+
+/*.tv-insert-study-item:not(.tv-insert-study-item--subgroup-header):hover {*/
+/*    background: #1D65A6;*/
+/*}*/
+
+/*隐藏横坐标设置*/
+.price-axis-stub-3MoqVLRB- {
+    display: none;
+}
+
+.pane-legend-item-value-container {
+    font-size: 11px !important;
+    font-family: gilroy-medium !important;
+}

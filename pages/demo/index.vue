@@ -16,20 +16,26 @@
       <img src="~assets/images/qr-prod.png"
            alt="">
     </div>
-    <div>用户信息{{userInfo}}</div>
+    <div>用户信息接口调试数据:{{userInfo}}</div>
+    <div>订阅调试数据:{{ticker}}</div>
+    <div>tradingview调试:
+      <Kline></Kline>
+    </div>
   </div>
 </template>
 <script>
 import { mapState, mapMutations } from 'vuex'
 import { fetchProfile } from '@/apiServices/accountCenter'
+
 export default {
   name: 'Demo',
   data () {
     return {
-      userInfo: {}
+      userInfo: {},
+      ticker: []
     }
   },
-
+  components: { Kline: () => import('@/components/kline-view.vue') },
   computed: {
     ...mapState({
       count: state => state.basic.count
@@ -54,10 +60,18 @@ export default {
       const data = await fetchProfile(this, true)
       console.log('用户信息>>>', data);
       this.userInfo = data
+    },
+    async subQuote () {
+      const cmd = { "op": "sub", "topic": "quotes" }
+      this.$bus.subscribe(cmd, data => {
+        console.log('订阅数据>>>', data);
+        this.ticker = data
+      })
     }
   },
   mounted () {
     this.fetchProfile()
+    this.subQuote()
   }
 }
 </script>

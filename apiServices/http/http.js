@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-// import { Notification } from 'element-ui';
+import { Notification } from 'element-ui';
 import { setApiEncrypt } from './setApiEncrypt'
 
 

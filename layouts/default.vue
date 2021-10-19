@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div>布局页面</div>
+    <div class="title">nuxt 服务端渲染DEMO调试</div>
     <nuxt></nuxt>
   </section>
 </template>
@@ -16,4 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.title {
+  text-align: center;
+}
 </style>
