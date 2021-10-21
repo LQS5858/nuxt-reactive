@@ -12,7 +12,7 @@
     <el-button @click="changeLang">
       改变语言
     </el-button>
-    <div>
+    <div class="animate__animated animate__bounce">
       <img src="~assets/images/qr-prod.png"
            alt="">
     </div>

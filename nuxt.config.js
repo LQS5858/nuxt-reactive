@@ -17,7 +17,8 @@ export default {
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    'animate.css/animate.css'
   ],
   router: {
     middleware: ['i18n'],
