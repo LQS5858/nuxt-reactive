@@ -20,7 +20,7 @@ export default {
     'element-ui/lib/theme-chalk/index.css'
   ],
   router: {
-    middleware: 'i18n'
+    middleware: ['i18n'],
   },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [

@@ -1,29 +1,32 @@
 <template>
   <div>
-    <Tutorial />
-    <div>数量测试{{ $store.state.basic.count }}</div>
-    <el-button type="primary"
-               @click="addHandler">
-      增加
-    </el-button>
   </div>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 export default {
   name: 'Home',
   data () {
     return {}
   },
+  computed: {
+    ...mapState({
+      screenSize: state => state.basic.screenSize
+    }),
+  },
+
   created () {
-    this.$router.push('/demo')
+    this.jumpTo()
   },
   methods: {
     // 参考官方文档
     ...mapMutations({
       add: 'basic/ADD_COUNT'
     }),
+    jumpTo () {
+      this.$router.push('/pc/demo')
+    },
     addHandler () {
       let num = 1
       num += 1

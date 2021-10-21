@@ -64,7 +64,6 @@ export default {
     async subQuote () {
       const cmd = { "op": "sub", "topic": "quotes" }
       this.$bus.subscribe(cmd, data => {
-        console.log('订阅数据>>>', data);
         this.ticker = data
       })
     }

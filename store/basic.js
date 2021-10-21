@@ -1,7 +1,8 @@
 export const state = () => ({
   count: 8,
   lang: 'zh',
-  userInfo: {}
+  userInfo: {},
+  screenSize: 'bigPc'
 })
 
 export const mutations = {
@@ -13,5 +14,8 @@ export const mutations = {
   },
   SAVE_USER_INFO (state, data) {
     state.userInfo = data
+  },
+  SET_SCREEN_SIZE (state, size) {
+    state.screenSize = size
   }
 }
