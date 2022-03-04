@@ -67,3 +67,45 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+
+
+### 使用pm2部署nuxt
+##### 先了解一下原始命令
+
+```
+node node_modules/nuxt/bin/nuxt.js # dev模式
+node node_modules/nuxt/bin/nuxt.js start # 线上模式
+```
+##### 在根目录创建pm2.json
+```
+{
+    "apps": [
+        {
+            "name": "NuxtAPP",
+            "script": "node_modules/nuxt/bin/nuxt.js",
+            "exec_mode": "fork",
+            "max_memory_restart": "1G",
+            "autorestart": true,
+            "node_args": [],
+            "args": ["start"],
+            "env": {
+            }
+        }
+    ]
+}
+```
+ pm2还有很多其他命令，请自行学习
+
+ > Warning 启动前必须先build，否则报错
+```
+npm run build
+```
+
+
+### 零停机部署方案
+
+零停机部署就是使用 PM2 的 cluster模式，更新程序的时候用 pm2 reload [appName]，有多个集群(cluster)的时候，PM2会先重启一部分进程，这样就不会导致服务中断，等新的进程重启成功后再重启其他进程，实现零停机(zero-downtime)部署。
+
+但是reload似乎在有时候会有代码更新后reload无法更新代码的问题。但只遇到了一次，实测在更新UI的时候，直接reload是可以更新成功的，等下次遇到了再解决吧。
+
