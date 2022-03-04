@@ -87,6 +87,8 @@ export default {
     analyze: true,
     analyze: {
       analyzerMode: 'static'
-    }
+    },
+    //配置静态文件上传到cdn；将构建产物dist/client上传到cdn
+    publicPath: "https://unpkg.com/"
   }
 }
