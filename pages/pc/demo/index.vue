@@ -21,6 +21,7 @@
     <div>tradingview调试:
       <Kline></Kline>
     </div>
+    <el-button @click.stop="jumpHandler">跳转到合约</el-button>
   </div>
 </template>
 <script>
@@ -42,6 +43,10 @@ export default {
     })
   },
   methods: {
+    jumpHandler () {
+      const { origin } = location || {}
+      location.href = `http://localhost:8080/futures`
+    },
     // 参考官方文档
     ...mapMutations({
       add: 'basic/ADD_COUNT'

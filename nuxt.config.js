@@ -82,6 +82,11 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [/^element-ui/]
+    transpile: [/^element-ui/],
+    //构建分析
+    analyze: true,
+    analyze: {
+      analyzerMode: 'static'
+    }
   }
 }
